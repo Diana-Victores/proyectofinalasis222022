@@ -17,7 +17,7 @@ namespace EjecucionConsultaInteligente
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Capa_Vista.Form1());
+            Application.Run(new Capa_Vista.Busqueda_Avanzada());
         }
     }
 }
