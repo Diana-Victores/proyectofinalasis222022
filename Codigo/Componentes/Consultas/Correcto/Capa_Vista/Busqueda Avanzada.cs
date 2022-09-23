@@ -14,7 +14,7 @@ namespace Capa_Vista
 {
     public partial class Busqueda_Avanzada : Form
     {
-        //Conexion cn = new Conexion();
+        //Conexion con = new Conexion();
         OdbcConnection cn = new OdbcConnection("Dsn=Colchoneria");
         public Busqueda_Avanzada()
         {
