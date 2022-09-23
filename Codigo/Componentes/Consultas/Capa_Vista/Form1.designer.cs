@@ -1,5 +1,5 @@
 ﻿
-namespace BusquedaInteligente
+namespace Capa_Vista
 {
     partial class Form1
     {

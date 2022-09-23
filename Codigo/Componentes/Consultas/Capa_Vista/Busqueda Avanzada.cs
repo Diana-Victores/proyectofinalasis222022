@@ -88,5 +88,10 @@ namespace Capa_Vista
                 //}
             }
         }
+
+        private void pnl_BuscarBA_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

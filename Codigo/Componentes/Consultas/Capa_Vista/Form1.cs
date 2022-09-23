@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Capa_Controlador;
 using System.Data.Odbc;
 
-namespace BusquedaInteligente
+namespace Capa_Vista
 {
     public partial class Form1 : Form
     {
@@ -171,7 +171,7 @@ namespace BusquedaInteligente
 
         private void iconButton12_Click(object sender, EventArgs e)
         {
-            cn.ejecutarconsulta(textConsultaBusqueda.Text);
+            //cn.ejecutarconsulta(textConsultaBusqueda.Text);
             MessageBox.Show("Las consultas con nombre " + textConsultaBusqueda.Text + " Han sido eliminadas");
             actualizaconsultas();
 
