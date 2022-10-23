@@ -286,6 +286,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private NavegadorVista.Navegador navegador1;
+      //  private NavegadorVista.Navegador navegador1;
     }
 }

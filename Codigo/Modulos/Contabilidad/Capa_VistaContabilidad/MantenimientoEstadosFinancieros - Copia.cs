@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Capa_VistaContabilidad
 {
-    public partial class MantenimientoActivos : Form
+    public partial class MantenimientoEstadosFinancieros : Form
     {
-        public MantenimientoActivos()
+        public MantenimientoEstadosFinancieros()
         {
             InitializeComponent();
         }
@@ -190,14 +190,14 @@ namespace Capa_VistaContabilidad
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-          /* NavegadorVista.Navegador.idApp = "8002";
+            NavegadorVista.Navegador.idApp = "8002";
             TextBox[] Grupotextbox = { txtId ,txtCodigo, txtNombre, txtDescripcion, txtPrecioPublico, txtExistencias };
             TextBox[] Idtextbox = { txtId, txtCodigo };
             navegador1.textbox = Grupotextbox;
             navegador1.tabla = dataGridView1;
             navegador1.textboxi = Idtextbox;
             navegador1.actual = this;
-            navegador1.cargar(dataGridView1, Grupotextbox, "colchoneria");*/
+            navegador1.cargar(dataGridView1, Grupotextbox, "colchoneria");
         }
 
         private void txtCodigo_TextChanged_1(object sender, EventArgs e)
