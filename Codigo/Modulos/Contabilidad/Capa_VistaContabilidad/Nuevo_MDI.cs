@@ -17,8 +17,8 @@ namespace Capa_VistaContabilidad
         {
             InitializeComponent();
             customizeDesing();
-            Button[] apps = { btn_modPresp, btn_RevPresp, btn_CierrePC, btn_CierreG, btn_EFinancieros,
-            btn_mantEnbCtas, btn_manTctas, btn_mantPolizaD, btn_MantTipoPol, btn_MantDetPol, bnt_MantActF, btn_MantTEFinanc};
+            Button[] apps = { btn_RevPresp, btn_CierrePC, btn_CierreG, btn_EFinancieros,
+            btn_mantEnbCtas, btn_manTctas, btn_mantPolizaD, btn_MantTipoPol, btn_MantDetPol, bnt_MantActF, btn_MantTEFinanc, btn_Moneda};
             cnc.deshabilitarApps(apps);
             //mante clases
             cnc.getAccesoApp (8002,apps[0]);
@@ -34,12 +34,11 @@ namespace Capa_VistaContabilidad
             cnc.getAccesoApp(8007, apps[5]);
             // Mantenimiento Activos Fijos
             cnc.getAccesoApp(8008, apps[6]);
-            // Mantenimiento Estados Financieros
-            
+            // Moneda
+            cnc.getAccesoApp(8009, apps[7]);
+
             // ----------- Procesos ---------
 
-            cnc.getAccesoApp(8030, apps[7]);
-            // Modificacion Presupuestos
             cnc.getAccesoApp(8031, apps[8]);
             // Revision Presupuestos
             cnc.getAccesoApp(8032, apps[9]);
@@ -152,7 +151,11 @@ namespace Capa_VistaContabilidad
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-
+            ProcesoPresupuesto presp = new ProcesoPresupuesto();
+            presp.MdiParent = this;
+            presp.StartPosition = FormStartPosition.CenterScreen;
+            presp.Show();
+            hideSubMenu();
         }
 
         private void btnContactoClientes_Click(object sender, EventArgs e)
@@ -204,11 +207,11 @@ namespace Capa_VistaContabilidad
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            Presupuesto presp = new Presupuesto();
-            presp.MdiParent = this;
-            presp.StartPosition = FormStartPosition.CenterScreen;
-            presp.Show();
-            hideSubMenu();
+            //Presupuesto presp = new Presupuesto();
+            //presp.MdiParent = this;
+            //presp.StartPosition = FormStartPosition.CenterScreen;
+            //presp.Show();
+            //hideSubMenu();
         }
 
         private void btnContactosProveedores_Click(object sender, EventArgs e)
@@ -434,6 +437,15 @@ namespace Capa_VistaContabilidad
             consultar.MdiParent = this;
             consultar.StartPosition = FormStartPosition.CenterScreen;
             consultar.Show();
+            hideSubMenu();
+        }
+
+        private void btn_Moneda_Click(object sender, EventArgs e)
+        {
+            MantenimientoMoneda presp = new MantenimientoMoneda();
+            presp.MdiParent = this;
+            presp.StartPosition = FormStartPosition.CenterScreen;
+            presp.Show();
             hideSubMenu();
         }
     }

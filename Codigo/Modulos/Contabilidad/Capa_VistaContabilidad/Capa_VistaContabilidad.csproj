@@ -173,6 +173,12 @@
     <Compile Include="MantenimientoDetallePolizaContable.designer.cs">
       <DependentUpon>MantenimientoDetallePolizaContable.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMoneda.Designer.cs">
+      <DependentUpon>MantenimientoMoneda.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoTipodeCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,11 +197,11 @@
     <Compile Include="Nuevo_MDI.designer.cs">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presupuesto.cs">
+    <Compile Include="ProcesoPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presupuesto.designer.cs">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
+    <Compile Include="ProcesoPresupuesto.Designer.cs">
+      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="MantenimientoDetallePolizaContable.resx">
       <DependentUpon>MantenimientoDetallePolizaContable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMoneda.resx">
+      <DependentUpon>MantenimientoMoneda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoTipodeCuentas.resx">
       <DependentUpon>MantenimientoTipodeCuentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,8 +254,8 @@
     <EmbeddedResource Include="Nuevo_MDI.resx">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presupuesto.resx">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
+    <EmbeddedResource Include="ProcesoPresupuesto.resx">
+      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

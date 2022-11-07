@@ -1,7 +1,7 @@
 ﻿
 namespace Capa_VistaContabilidad
 {
-    partial class MantenimientoPresupuesto
+    partial class ProcesoPresupuesto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,17 @@ namespace Capa_VistaContabilidad
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.total = new System.Windows.Forms.TextBox();
+            this.dtime_act = new System.Windows.Forms.DateTimePicker();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_Limpiar = new System.Windows.Forms.Button();
-            this.btn_Buscar = new System.Windows.Forms.Button();
-            this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -50,74 +48,43 @@ namespace Capa_VistaContabilidad
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_Modificar = new System.Windows.Forms.Button();
-            this.btn_Guardar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.idPresupuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMoneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Anotacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gastoscorrientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GastosPersonal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GastosFinancieros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TransferenciasCorrientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TransferenciasCapital = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActivosFijos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActivosFinancieros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasivosFinancieros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Presupuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(248, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(885, 534);
-            this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPresupuesto,
-            this.idMoneda,
-            this.idArea,
-            this.idCuenta,
-            this.Nombre,
-            this.Fecha,
-            this.Descripcion,
-            this.Monto,
-            this.Anotacion,
-            this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 510);
-            this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox10);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.total);
+            this.panel1.Controls.Add(this.dtime_act);
             this.panel1.Controls.Add(this.textBox9);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btn_actualizar);
-            this.panel1.Controls.Add(this.btn_Limpiar);
-            this.panel1.Controls.Add(this.btn_Buscar);
-            this.panel1.Controls.Add(this.btn_Eliminar);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox4);
@@ -126,26 +93,42 @@ namespace Capa_VistaContabilidad
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.btn_Modificar);
-            this.panel1.Controls.Add(this.btn_Guardar);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 534);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(232, 534);
+            this.panel1.TabIndex = 3;
             // 
-            // textBox10
+            // label8
             // 
-            this.textBox10.Location = new System.Drawing.Point(11, 476);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(127, 20);
-            this.textBox10.TabIndex = 25;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(61, 465);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 13);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "Total de Presupuesto";
+            // 
+            // total
+            // 
+            this.total.Location = new System.Drawing.Point(64, 491);
+            this.total.Name = "total";
+            this.total.Size = new System.Drawing.Size(100, 20);
+            this.total.TabIndex = 42;
+            // 
+            // dtime_act
+            // 
+            this.dtime_act.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtime_act.Location = new System.Drawing.Point(8, 26);
+            this.dtime_act.Name = "dtime_act";
+            this.dtime_act.Size = new System.Drawing.Size(135, 20);
+            this.dtime_act.TabIndex = 41;
             // 
             // textBox9
             // 
@@ -153,24 +136,25 @@ namespace Capa_VistaContabilidad
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(127, 20);
             this.textBox9.TabIndex = 24;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 342);
+            this.label10.Location = new System.Drawing.Point(11, 406);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.Size = new System.Drawing.Size(98, 13);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Anotacion";
+            this.label10.Text = "Pasivos financieros";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 289);
+            this.label9.Location = new System.Drawing.Point(12, 354);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.Size = new System.Drawing.Size(99, 13);
             this.label9.TabIndex = 22;
-            this.label9.Text = "Monto";
+            this.label9.Text = "Activos Financieros";
             // 
             // textBox8
             // 
@@ -178,19 +162,11 @@ namespace Capa_VistaContabilidad
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(129, 20);
             this.textBox8.TabIndex = 21;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 445);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Status";
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.Location = new System.Drawing.Point(167, 445);
+            this.btn_actualizar.Location = new System.Drawing.Point(145, 396);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(75, 23);
             this.btn_actualizar.TabIndex = 19;
@@ -198,35 +174,25 @@ namespace Capa_VistaContabilidad
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
-            // btn_Limpiar
+            // button5
             // 
-            this.btn_Limpiar.Location = new System.Drawing.Point(167, 337);
-            this.btn_Limpiar.Name = "btn_Limpiar";
-            this.btn_Limpiar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Limpiar.TabIndex = 18;
-            this.btn_Limpiar.Text = "Limpiar";
-            this.btn_Limpiar.UseVisualStyleBackColor = true;
-            this.btn_Limpiar.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Location = new System.Drawing.Point(145, 293);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Limpiar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // btn_Buscar
+            // button3
             // 
-            this.btn_Buscar.Location = new System.Drawing.Point(167, 237);
-            this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Buscar.TabIndex = 17;
-            this.btn_Buscar.Text = "Buscar";
-            this.btn_Buscar.UseVisualStyleBackColor = true;
-            this.btn_Buscar.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btn_Eliminar
-            // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(167, 167);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Eliminar.TabIndex = 16;
-            this.btn_Eliminar.Text = "Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
-            this.btn_Eliminar.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Location = new System.Drawing.Point(145, 193);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Eliminar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox7
             // 
@@ -234,15 +200,16 @@ namespace Capa_VistaContabilidad
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(127, 20);
             this.textBox7.TabIndex = 15;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(10, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.Size = new System.Drawing.Size(27, 13);
             this.label7.TabIndex = 14;
-            this.label7.Text = "IdPresupuesto";
+            this.label7.Text = "Mes";
             // 
             // textBox4
             // 
@@ -250,15 +217,16 @@ namespace Capa_VistaContabilidad
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(127, 20);
             this.textBox4.TabIndex = 13;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 393);
+            this.label4.Location = new System.Drawing.Point(11, 66);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Descripcion";
+            this.label4.Text = "Gastos corrientes";
             // 
             // textBox5
             // 
@@ -266,15 +234,16 @@ namespace Capa_VistaContabilidad
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(125, 20);
             this.textBox5.TabIndex = 11;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 237);
+            this.label5.Location = new System.Drawing.Point(12, 303);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Fecha";
+            this.label5.Text = "Activos fijos";
             // 
             // textBox6
             // 
@@ -282,35 +251,36 @@ namespace Capa_VistaContabilidad
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(125, 20);
             this.textBox6.TabIndex = 9;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 193);
+            this.label6.Location = new System.Drawing.Point(7, 250);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.Size = new System.Drawing.Size(126, 13);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Nombre";
+            this.label6.Text = "Transferencias de capital";
             // 
-            // btn_Modificar
+            // button2
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(167, 105);
-            this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Modificar.TabIndex = 7;
-            this.btn_Modificar.Text = "Modificar";
-            this.btn_Modificar.UseVisualStyleBackColor = true;
-            this.btn_Modificar.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Location = new System.Drawing.Point(145, 124);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Modificar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_Guardar
+            // button1
             // 
-            this.btn_Guardar.Location = new System.Drawing.Point(167, 51);
-            this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Guardar.TabIndex = 6;
-            this.btn_Guardar.Text = "Guardar";
-            this.btn_Guardar.UseVisualStyleBackColor = true;
-            this.btn_Guardar.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Location = new System.Drawing.Point(145, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox3
             // 
@@ -318,15 +288,16 @@ namespace Capa_VistaContabilidad
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(127, 20);
             this.textBox3.TabIndex = 5;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 150);
+            this.label3.Location = new System.Drawing.Point(10, 198);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(126, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "idCuenta";
+            this.label3.Text = "Transferencias corrientes";
             // 
             // textBox2
             // 
@@ -334,145 +305,150 @@ namespace Capa_VistaContabilidad
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(127, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 105);
+            this.label2.Location = new System.Drawing.Point(11, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "idArea";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(11, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
-            this.textBox1.TabIndex = 1;
+            this.label2.Text = "Gastos financieros";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 61);
+            this.label1.Location = new System.Drawing.Point(13, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "idMoneda";
+            this.label1.Text = "Gastos de personal";
             // 
-            // idPresupuesto
+            // panel2
             // 
-            this.idPresupuesto.HeaderText = "idPresupuesto";
-            this.idPresupuesto.MinimumWidth = 6;
-            this.idPresupuesto.Name = "idPresupuesto";
-            this.idPresupuesto.ReadOnly = true;
-            this.idPresupuesto.Width = 80;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(232, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1119, 534);
+            this.panel2.TabIndex = 4;
             // 
-            // idMoneda
+            // dataGridView1
             // 
-            this.idMoneda.HeaderText = "idMoneda";
-            this.idMoneda.MinimumWidth = 6;
-            this.idMoneda.Name = "idMoneda";
-            this.idMoneda.ReadOnly = true;
-            this.idMoneda.Width = 80;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Mes,
+            this.Gastoscorrientes,
+            this.GastosPersonal,
+            this.GastosFinancieros,
+            this.TransferenciasCorrientes,
+            this.TransferenciasCapital,
+            this.ActivosFijos,
+            this.ActivosFinancieros,
+            this.PasivosFinancieros,
+            this.Total_Presupuesto});
+            this.dataGridView1.Location = new System.Drawing.Point(20, 10);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1052, 501);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // idArea
+            // Mes
             // 
-            this.idArea.HeaderText = "idArea";
-            this.idArea.MinimumWidth = 6;
-            this.idArea.Name = "idArea";
-            this.idArea.ReadOnly = true;
-            this.idArea.Width = 80;
+            this.Mes.HeaderText = "Mes";
+            this.Mes.Name = "Mes";
+            this.Mes.ReadOnly = true;
             // 
-            // idCuenta
+            // Gastoscorrientes
             // 
-            this.idCuenta.HeaderText = "idCuenta";
-            this.idCuenta.MinimumWidth = 6;
-            this.idCuenta.Name = "idCuenta";
-            this.idCuenta.ReadOnly = true;
-            this.idCuenta.Width = 80;
+            this.Gastoscorrientes.HeaderText = "GastosCorrientes";
+            this.Gastoscorrientes.Name = "Gastoscorrientes";
+            this.Gastoscorrientes.ReadOnly = true;
             // 
-            // Nombre
+            // GastosPersonal
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 80;
+            this.GastosPersonal.HeaderText = "GastosPersonal";
+            this.GastosPersonal.Name = "GastosPersonal";
+            this.GastosPersonal.ReadOnly = true;
             // 
-            // Fecha
+            // GastosFinancieros
             // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 80;
+            this.GastosFinancieros.HeaderText = "GastosFinancieros";
+            this.GastosFinancieros.Name = "GastosFinancieros";
+            this.GastosFinancieros.ReadOnly = true;
             // 
-            // Descripcion
+            // TransferenciasCorrientes
             // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 85;
+            this.TransferenciasCorrientes.HeaderText = "TransferenciasCorrientes";
+            this.TransferenciasCorrientes.Name = "TransferenciasCorrientes";
+            this.TransferenciasCorrientes.ReadOnly = true;
             // 
-            // Monto
+            // TransferenciasCapital
             // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MinimumWidth = 6;
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            this.Monto.Width = 80;
+            this.TransferenciasCapital.HeaderText = "TransferenciasCapital";
+            this.TransferenciasCapital.Name = "TransferenciasCapital";
+            this.TransferenciasCapital.ReadOnly = true;
             // 
-            // Anotacion
+            // ActivosFijos
             // 
-            this.Anotacion.HeaderText = "Anotacion";
-            this.Anotacion.MinimumWidth = 6;
-            this.Anotacion.Name = "Anotacion";
-            this.Anotacion.ReadOnly = true;
-            this.Anotacion.Width = 80;
+            this.ActivosFijos.HeaderText = "ActivosFijos";
+            this.ActivosFijos.Name = "ActivosFijos";
+            this.ActivosFijos.ReadOnly = true;
             // 
-            // Status
+            // ActivosFinancieros
             // 
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 80;
+            this.ActivosFinancieros.HeaderText = "ActivosFinancieros";
+            this.ActivosFinancieros.Name = "ActivosFinancieros";
+            this.ActivosFinancieros.ReadOnly = true;
             // 
-            // MantenimientoPresupuesto
+            // PasivosFinancieros
+            // 
+            this.PasivosFinancieros.HeaderText = "PasivosFinancieros";
+            this.PasivosFinancieros.Name = "PasivosFinancieros";
+            this.PasivosFinancieros.ReadOnly = true;
+            // 
+            // Total_Presupuesto
+            // 
+            this.Total_Presupuesto.HeaderText = "Total_Presupuesto";
+            this.Total_Presupuesto.Name = "Total_Presupuesto";
+            this.Total_Presupuesto.ReadOnly = true;
+            // 
+            // ProcesoPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 534);
+            this.ClientSize = new System.Drawing.Size(1363, 534);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "MantenimientoPresupuesto";
-            this.Text = "MantenimientoPresupuesto";
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "ProcesoPresupuesto";
+            this.Text = "ProcesoPresupuesto";
+            this.Load += new System.EventHandler(this.PocesoPresupuesto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox total;
+        private System.Windows.Forms.DateTimePicker dtime_act;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_actualizar;
-        private System.Windows.Forms.Button btn_Limpiar;
-        private System.Windows.Forms.Button btn_Buscar;
-        private System.Windows.Forms.Button btn_Eliminar;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
@@ -481,23 +457,25 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_Modificar;
-        private System.Windows.Forms.Button btn_Guardar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPresupuesto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMoneda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idArea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCuenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Anotacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gastoscorrientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GastosPersonal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GastosFinancieros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TransferenciasCorrientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TransferenciasCapital;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivosFijos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivosFinancieros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PasivosFinancieros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Presupuesto;
     }
 }

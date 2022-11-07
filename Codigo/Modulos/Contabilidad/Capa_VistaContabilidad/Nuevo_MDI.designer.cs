@@ -57,10 +57,10 @@ namespace Capa_VistaContabilidad
             this.btn_CierreG = new System.Windows.Forms.Button();
             this.btn_CierrePC = new System.Windows.Forms.Button();
             this.btn_RevPresp = new System.Windows.Forms.Button();
-            this.btn_modPresp = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Moneda = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMant.SuspendLayout();
             this.panelEstadosF.SuspendLayout();
@@ -92,9 +92,8 @@ namespace Capa_VistaContabilidad
             this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(316, 690);
+            this.panelSideMenu.Size = new System.Drawing.Size(237, 561);
             this.panelSideMenu.TabIndex = 1;
             // 
             // panelMant
@@ -102,10 +101,9 @@ namespace Capa_VistaContabilidad
             this.panelMant.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelMant.Controls.Add(this.btn_exit);
             this.panelMant.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMant.Location = new System.Drawing.Point(0, 1388);
-            this.panelMant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMant.Location = new System.Drawing.Point(0, 1128);
             this.panelMant.Name = "panelMant";
-            this.panelMant.Size = new System.Drawing.Size(295, 94);
+            this.panelMant.Size = new System.Drawing.Size(220, 76);
             this.panelMant.TabIndex = 11;
             // 
             // btn_exit
@@ -115,10 +113,9 @@ namespace Capa_VistaContabilidad
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btn_exit.Location = new System.Drawing.Point(0, 0);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_exit.Size = new System.Drawing.Size(295, 43);
+            this.btn_exit.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_exit.Size = new System.Drawing.Size(220, 35);
             this.btn_exit.TabIndex = 9;
             this.btn_exit.Text = "Salir";
             this.btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,11 +131,10 @@ namespace Capa_VistaContabilidad
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(0, 1340);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Location = new System.Drawing.Point(0, 1089);
             this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(295, 48);
+            this.button12.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.button12.Size = new System.Drawing.Size(220, 39);
             this.button12.TabIndex = 10;
             this.button12.Text = "Salir";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,10 +146,9 @@ namespace Capa_VistaContabilidad
             this.panelEstadosF.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelEstadosF.Controls.Add(this.btn_ConsultaInt);
             this.panelEstadosF.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEstadosF.Location = new System.Drawing.Point(0, 1248);
-            this.panelEstadosF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEstadosF.Location = new System.Drawing.Point(0, 1014);
             this.panelEstadosF.Name = "panelEstadosF";
-            this.panelEstadosF.Size = new System.Drawing.Size(295, 92);
+            this.panelEstadosF.Size = new System.Drawing.Size(220, 75);
             this.panelEstadosF.TabIndex = 7;
             // 
             // btn_ConsultaInt
@@ -163,10 +158,9 @@ namespace Capa_VistaContabilidad
             this.btn_ConsultaInt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultaInt.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btn_ConsultaInt.Location = new System.Drawing.Point(0, 0);
-            this.btn_ConsultaInt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ConsultaInt.Name = "btn_ConsultaInt";
-            this.btn_ConsultaInt.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_ConsultaInt.Size = new System.Drawing.Size(295, 43);
+            this.btn_ConsultaInt.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_ConsultaInt.Size = new System.Drawing.Size(220, 35);
             this.btn_ConsultaInt.TabIndex = 9;
             this.btn_ConsultaInt.Text = "Consulta Inteligente Avanzada";
             this.btn_ConsultaInt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,11 +176,10 @@ namespace Capa_VistaContabilidad
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 1200);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(0, 975);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(295, 48);
+            this.button1.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(220, 39);
             this.button1.TabIndex = 6;
             this.button1.Text = "Herramientas";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,10 +191,9 @@ namespace Capa_VistaContabilidad
             this.panelCierreC.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelCierreC.Controls.Add(this.btn_Security);
             this.panelCierreC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCierreC.Location = new System.Drawing.Point(0, 1106);
-            this.panelCierreC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCierreC.Location = new System.Drawing.Point(0, 899);
             this.panelCierreC.Name = "panelCierreC";
-            this.panelCierreC.Size = new System.Drawing.Size(295, 94);
+            this.panelCierreC.Size = new System.Drawing.Size(220, 76);
             this.panelCierreC.TabIndex = 8;
             // 
             // btn_Security
@@ -211,10 +203,9 @@ namespace Capa_VistaContabilidad
             this.btn_Security.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Security.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btn_Security.Location = new System.Drawing.Point(0, 0);
-            this.btn_Security.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Security.Name = "btn_Security";
-            this.btn_Security.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_Security.Size = new System.Drawing.Size(295, 43);
+            this.btn_Security.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_Security.Size = new System.Drawing.Size(220, 35);
             this.btn_Security.TabIndex = 9;
             this.btn_Security.Text = "Seguridad";
             this.btn_Security.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,11 +220,10 @@ namespace Capa_VistaContabilidad
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(0, 1058);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Location = new System.Drawing.Point(0, 860);
             this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(295, 48);
+            this.button6.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(220, 39);
             this.button6.TabIndex = 7;
             this.button6.Text = "Seguridad";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,10 +235,9 @@ namespace Capa_VistaContabilidad
             this.panelPresupuestos.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelPresupuestos.Controls.Add(this.btn_ReportesConta);
             this.panelPresupuestos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPresupuestos.Location = new System.Drawing.Point(0, 972);
-            this.panelPresupuestos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelPresupuestos.Location = new System.Drawing.Point(0, 790);
             this.panelPresupuestos.Name = "panelPresupuestos";
-            this.panelPresupuestos.Size = new System.Drawing.Size(295, 86);
+            this.panelPresupuestos.Size = new System.Drawing.Size(220, 70);
             this.panelPresupuestos.TabIndex = 5;
             this.panelPresupuestos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -259,10 +248,9 @@ namespace Capa_VistaContabilidad
             this.btn_ReportesConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ReportesConta.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btn_ReportesConta.Location = new System.Drawing.Point(0, 0);
-            this.btn_ReportesConta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ReportesConta.Name = "btn_ReportesConta";
-            this.btn_ReportesConta.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_ReportesConta.Size = new System.Drawing.Size(295, 43);
+            this.btn_ReportesConta.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_ReportesConta.Size = new System.Drawing.Size(220, 35);
             this.btn_ReportesConta.TabIndex = 9;
             this.btn_ReportesConta.Text = "Reportes Contabilidad";
             this.btn_ReportesConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,11 +265,10 @@ namespace Capa_VistaContabilidad
             this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedor.ForeColor = System.Drawing.Color.Black;
-            this.btnProveedor.Location = new System.Drawing.Point(0, 924);
-            this.btnProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProveedor.Location = new System.Drawing.Point(0, 751);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
-            this.btnProveedor.Size = new System.Drawing.Size(295, 48);
+            this.btnProveedor.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnProveedor.Size = new System.Drawing.Size(220, 39);
             this.btnProveedor.TabIndex = 4;
             this.btnProveedor.Text = "Reportes";
             this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,6 +278,7 @@ namespace Capa_VistaContabilidad
             // panelActivos
             // 
             this.panelActivos.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panelActivos.Controls.Add(this.btn_Moneda);
             this.panelActivos.Controls.Add(this.btn_MantTEFinanc);
             this.panelActivos.Controls.Add(this.bnt_MantActF);
             this.panelActivos.Controls.Add(this.btn_MantDetPol);
@@ -299,10 +287,9 @@ namespace Capa_VistaContabilidad
             this.panelActivos.Controls.Add(this.btn_manTctas);
             this.panelActivos.Controls.Add(this.btn_mantEnbCtas);
             this.panelActivos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelActivos.Location = new System.Drawing.Point(0, 535);
-            this.panelActivos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelActivos.Location = new System.Drawing.Point(0, 435);
             this.panelActivos.Name = "panelActivos";
-            this.panelActivos.Size = new System.Drawing.Size(295, 389);
+            this.panelActivos.Size = new System.Drawing.Size(220, 316);
             this.panelActivos.TabIndex = 3;
             // 
             // btn_MantTEFinanc
@@ -311,11 +298,10 @@ namespace Capa_VistaContabilidad
             this.btn_MantTEFinanc.FlatAppearance.BorderSize = 0;
             this.btn_MantTEFinanc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MantTEFinanc.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_MantTEFinanc.Location = new System.Drawing.Point(0, 258);
-            this.btn_MantTEFinanc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_MantTEFinanc.Location = new System.Drawing.Point(0, 210);
             this.btn_MantTEFinanc.Name = "btn_MantTEFinanc";
-            this.btn_MantTEFinanc.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_MantTEFinanc.Size = new System.Drawing.Size(295, 43);
+            this.btn_MantTEFinanc.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_MantTEFinanc.Size = new System.Drawing.Size(220, 35);
             this.btn_MantTEFinanc.TabIndex = 9;
             this.btn_MantTEFinanc.Text = "Mantenimiento Estados Financieros";
             this.btn_MantTEFinanc.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -328,11 +314,10 @@ namespace Capa_VistaContabilidad
             this.bnt_MantActF.FlatAppearance.BorderSize = 0;
             this.bnt_MantActF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnt_MantActF.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.bnt_MantActF.Location = new System.Drawing.Point(0, 215);
-            this.bnt_MantActF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnt_MantActF.Location = new System.Drawing.Point(0, 175);
             this.bnt_MantActF.Name = "bnt_MantActF";
-            this.bnt_MantActF.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.bnt_MantActF.Size = new System.Drawing.Size(295, 43);
+            this.bnt_MantActF.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.bnt_MantActF.Size = new System.Drawing.Size(220, 35);
             this.bnt_MantActF.TabIndex = 8;
             this.bnt_MantActF.Text = "Mantenimiento Activos Fijos";
             this.bnt_MantActF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,11 +330,10 @@ namespace Capa_VistaContabilidad
             this.btn_MantDetPol.FlatAppearance.BorderSize = 0;
             this.btn_MantDetPol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MantDetPol.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_MantDetPol.Location = new System.Drawing.Point(0, 172);
-            this.btn_MantDetPol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_MantDetPol.Location = new System.Drawing.Point(0, 140);
             this.btn_MantDetPol.Name = "btn_MantDetPol";
-            this.btn_MantDetPol.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_MantDetPol.Size = new System.Drawing.Size(295, 43);
+            this.btn_MantDetPol.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_MantDetPol.Size = new System.Drawing.Size(220, 35);
             this.btn_MantDetPol.TabIndex = 6;
             this.btn_MantDetPol.Text = "Mantenimiento Detalle Poliza";
             this.btn_MantDetPol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,11 +346,10 @@ namespace Capa_VistaContabilidad
             this.btn_MantTipoPol.FlatAppearance.BorderSize = 0;
             this.btn_MantTipoPol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MantTipoPol.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_MantTipoPol.Location = new System.Drawing.Point(0, 129);
-            this.btn_MantTipoPol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_MantTipoPol.Location = new System.Drawing.Point(0, 105);
             this.btn_MantTipoPol.Name = "btn_MantTipoPol";
-            this.btn_MantTipoPol.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_MantTipoPol.Size = new System.Drawing.Size(295, 43);
+            this.btn_MantTipoPol.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_MantTipoPol.Size = new System.Drawing.Size(220, 35);
             this.btn_MantTipoPol.TabIndex = 7;
             this.btn_MantTipoPol.Text = "Mantenimiento Tipo Polizas";
             this.btn_MantTipoPol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -379,11 +362,10 @@ namespace Capa_VistaContabilidad
             this.btn_mantPolizaD.FlatAppearance.BorderSize = 0;
             this.btn_mantPolizaD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mantPolizaD.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_mantPolizaD.Location = new System.Drawing.Point(0, 86);
-            this.btn_mantPolizaD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_mantPolizaD.Location = new System.Drawing.Point(0, 70);
             this.btn_mantPolizaD.Name = "btn_mantPolizaD";
-            this.btn_mantPolizaD.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_mantPolizaD.Size = new System.Drawing.Size(295, 43);
+            this.btn_mantPolizaD.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_mantPolizaD.Size = new System.Drawing.Size(220, 35);
             this.btn_mantPolizaD.TabIndex = 1;
             this.btn_mantPolizaD.Text = "Mantenimiento Cuentas";
             this.btn_mantPolizaD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -396,11 +378,10 @@ namespace Capa_VistaContabilidad
             this.btn_manTctas.FlatAppearance.BorderSize = 0;
             this.btn_manTctas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_manTctas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_manTctas.Location = new System.Drawing.Point(0, 43);
-            this.btn_manTctas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_manTctas.Location = new System.Drawing.Point(0, 35);
             this.btn_manTctas.Name = "btn_manTctas";
-            this.btn_manTctas.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_manTctas.Size = new System.Drawing.Size(295, 43);
+            this.btn_manTctas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_manTctas.Size = new System.Drawing.Size(220, 35);
             this.btn_manTctas.TabIndex = 2;
             this.btn_manTctas.Text = "Mantenimiento Tipo Cuentas";
             this.btn_manTctas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -414,10 +395,9 @@ namespace Capa_VistaContabilidad
             this.btn_mantEnbCtas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mantEnbCtas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btn_mantEnbCtas.Location = new System.Drawing.Point(0, 0);
-            this.btn_mantEnbCtas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_mantEnbCtas.Name = "btn_mantEnbCtas";
-            this.btn_mantEnbCtas.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_mantEnbCtas.Size = new System.Drawing.Size(295, 43);
+            this.btn_mantEnbCtas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_mantEnbCtas.Size = new System.Drawing.Size(220, 35);
             this.btn_mantEnbCtas.TabIndex = 0;
             this.btn_mantEnbCtas.Text = "Mantenimiento Encabezado Cuentas";
             this.btn_mantEnbCtas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -433,11 +413,10 @@ namespace Capa_VistaContabilidad
             this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.ForeColor = System.Drawing.Color.Black;
-            this.btnClient.Location = new System.Drawing.Point(0, 487);
-            this.btnClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClient.Location = new System.Drawing.Point(0, 396);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
-            this.btnClient.Size = new System.Drawing.Size(295, 48);
+            this.btnClient.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnClient.Size = new System.Drawing.Size(220, 39);
             this.btnClient.TabIndex = 2;
             this.btnClient.Text = "Catalogos";
             this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -451,12 +430,10 @@ namespace Capa_VistaContabilidad
             this.panelPolizas.Controls.Add(this.btn_CierreG);
             this.panelPolizas.Controls.Add(this.btn_CierrePC);
             this.panelPolizas.Controls.Add(this.btn_RevPresp);
-            this.panelPolizas.Controls.Add(this.btn_modPresp);
             this.panelPolizas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPolizas.Location = new System.Drawing.Point(0, 155);
-            this.panelPolizas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelPolizas.Location = new System.Drawing.Point(0, 126);
             this.panelPolizas.Name = "panelPolizas";
-            this.panelPolizas.Size = new System.Drawing.Size(295, 332);
+            this.panelPolizas.Size = new System.Drawing.Size(220, 270);
             this.panelPolizas.TabIndex = 1;
             // 
             // btn_EFinancieros
@@ -465,11 +442,10 @@ namespace Capa_VistaContabilidad
             this.btn_EFinancieros.FlatAppearance.BorderSize = 0;
             this.btn_EFinancieros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EFinancieros.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_EFinancieros.Location = new System.Drawing.Point(0, 172);
-            this.btn_EFinancieros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_EFinancieros.Location = new System.Drawing.Point(0, 105);
             this.btn_EFinancieros.Name = "btn_EFinancieros";
-            this.btn_EFinancieros.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_EFinancieros.Size = new System.Drawing.Size(295, 43);
+            this.btn_EFinancieros.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_EFinancieros.Size = new System.Drawing.Size(220, 35);
             this.btn_EFinancieros.TabIndex = 0;
             this.btn_EFinancieros.Text = "Estados Financieros";
             this.btn_EFinancieros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -482,11 +458,10 @@ namespace Capa_VistaContabilidad
             this.btn_CierreG.FlatAppearance.BorderSize = 0;
             this.btn_CierreG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CierreG.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_CierreG.Location = new System.Drawing.Point(0, 129);
-            this.btn_CierreG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CierreG.Location = new System.Drawing.Point(0, 70);
             this.btn_CierreG.Name = "btn_CierreG";
-            this.btn_CierreG.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_CierreG.Size = new System.Drawing.Size(295, 43);
+            this.btn_CierreG.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_CierreG.Size = new System.Drawing.Size(220, 35);
             this.btn_CierreG.TabIndex = 1;
             this.btn_CierreG.Text = "Cierre General";
             this.btn_CierreG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -499,11 +474,10 @@ namespace Capa_VistaContabilidad
             this.btn_CierrePC.FlatAppearance.BorderSize = 0;
             this.btn_CierrePC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CierrePC.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_CierrePC.Location = new System.Drawing.Point(0, 86);
-            this.btn_CierrePC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CierrePC.Location = new System.Drawing.Point(0, 35);
             this.btn_CierrePC.Name = "btn_CierrePC";
-            this.btn_CierrePC.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_CierrePC.Size = new System.Drawing.Size(295, 43);
+            this.btn_CierrePC.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_CierrePC.Size = new System.Drawing.Size(220, 35);
             this.btn_CierrePC.TabIndex = 0;
             this.btn_CierrePC.Text = "Cierre Por Cuentas";
             this.btn_CierrePC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -516,33 +490,15 @@ namespace Capa_VistaContabilidad
             this.btn_RevPresp.FlatAppearance.BorderSize = 0;
             this.btn_RevPresp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RevPresp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_RevPresp.Location = new System.Drawing.Point(0, 43);
-            this.btn_RevPresp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_RevPresp.Location = new System.Drawing.Point(0, 0);
             this.btn_RevPresp.Name = "btn_RevPresp";
-            this.btn_RevPresp.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_RevPresp.Size = new System.Drawing.Size(295, 43);
+            this.btn_RevPresp.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_RevPresp.Size = new System.Drawing.Size(220, 35);
             this.btn_RevPresp.TabIndex = 0;
             this.btn_RevPresp.Text = "Revision Presupuestos";
             this.btn_RevPresp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RevPresp.UseVisualStyleBackColor = true;
             this.btn_RevPresp.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // btn_modPresp
-            // 
-            this.btn_modPresp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_modPresp.FlatAppearance.BorderSize = 0;
-            this.btn_modPresp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modPresp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_modPresp.Location = new System.Drawing.Point(0, 0);
-            this.btn_modPresp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_modPresp.Name = "btn_modPresp";
-            this.btn_modPresp.Padding = new System.Windows.Forms.Padding(85, 0, 0, 0);
-            this.btn_modPresp.Size = new System.Drawing.Size(295, 43);
-            this.btn_modPresp.TabIndex = 0;
-            this.btn_modPresp.Text = "Modificacion Presupuestos";
-            this.btn_modPresp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modPresp.UseVisualStyleBackColor = true;
-            this.btn_modPresp.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnCompras
             // 
@@ -553,11 +509,10 @@ namespace Capa_VistaContabilidad
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.Black;
-            this.btnCompras.Location = new System.Drawing.Point(0, 107);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompras.Location = new System.Drawing.Point(0, 87);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Padding = new System.Windows.Forms.Padding(68, 0, 0, 0);
-            this.btnCompras.Size = new System.Drawing.Size(295, 48);
+            this.btnCompras.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
+            this.btnCompras.Size = new System.Drawing.Size(220, 39);
             this.btnCompras.TabIndex = 0;
             this.btnCompras.Text = "Procesos";
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -569,9 +524,8 @@ namespace Capa_VistaContabilidad
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(295, 107);
+            this.panelLogo.Size = new System.Drawing.Size(220, 87);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -581,24 +535,38 @@ namespace Capa_VistaContabilidad
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 107);
+            this.pictureBox1.Size = new System.Drawing.Size(220, 87);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_Moneda
+            // 
+            this.btn_Moneda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Moneda.FlatAppearance.BorderSize = 0;
+            this.btn_Moneda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Moneda.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_Moneda.Location = new System.Drawing.Point(0, 245);
+            this.btn_Moneda.Name = "btn_Moneda";
+            this.btn_Moneda.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_Moneda.Size = new System.Drawing.Size(220, 35);
+            this.btn_Moneda.TabIndex = 10;
+            this.btn_Moneda.Text = "Mantenimiento Moneda";
+            this.btn_Moneda.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_Moneda.UseVisualStyleBackColor = true;
+            this.btn_Moneda.Click += new System.EventHandler(this.btn_Moneda_Click);
+            // 
             // Nuevo_MDI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1179, 690);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(1194, 728);
+            this.MinimumSize = new System.Drawing.Size(900, 599);
             this.Name = "Nuevo_MDI";
             this.Text = "Modulo Contabilidad";
             this.Load += new System.EventHandler(this.central_Compra_Load);
@@ -622,7 +590,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Button btn_RevPresp;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Panel panelPolizas;
-        private System.Windows.Forms.Button btn_modPresp;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -648,5 +615,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Button btn_ConsultaInt;
         private System.Windows.Forms.Button btn_Security;
         private System.Windows.Forms.Button btn_ReportesConta;
+        private System.Windows.Forms.Button btn_Moneda;
     }
 }

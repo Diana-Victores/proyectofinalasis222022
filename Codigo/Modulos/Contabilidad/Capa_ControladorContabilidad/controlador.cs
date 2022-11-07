@@ -728,6 +728,168 @@ namespace Capa_ControladorContabilidad
                 return false;
             }
         }
+        public bool InsertPres(string PKidpresupuesto, string Mes, float gastosCorrientes, float gastosPersol, float gastosFinancieros, float TransferenciaCorriente, float TransferenciaCapital, float ActivosFijos, float ActivosFinancieros, float PasivosFinancieros, float Total_Presupuesto)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
 
+                    #region Query
+                    string query = @"INSERT INTO tbl_presupuesto (PKidpresupuesto,Mes,gastosCorrientes,gastosPersol,gastosFinancieros,TransferenciaCorriente,TransferenciaCapital,ActivosFijos,ActivosFinancieros,PasivosFinancieros,Total_Presupuesto)VALUE(?,?,?,?,?,?,?,?,?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@PKidpresupuesto", OdbcType.Int).Value = PKidpresupuesto;
+                    cmd.Parameters.Add("@Mes", OdbcType.Date).Value = Mes;
+                    cmd.Parameters.Add("@gastosCorrientes", OdbcType.Double).Value = gastosCorrientes;
+                    cmd.Parameters.Add("@gastosPersol", OdbcType.Double).Value = gastosPersol;
+                    cmd.Parameters.Add("@gastosFinancieros", OdbcType.Double).Value = gastosFinancieros;
+                    cmd.Parameters.Add("@TransferenciaCorriente", OdbcType.Double).Value = TransferenciaCorriente;
+                    cmd.Parameters.Add("@TransferenciaCapital", OdbcType.Double).Value = TransferenciaCapital;
+                    cmd.Parameters.Add("@ActivosFijos", OdbcType.Double).Value = ActivosFijos;
+                    cmd.Parameters.Add("@ActivosFinancieros", OdbcType.Double).Value = ActivosFinancieros;
+                    cmd.Parameters.Add("@PasivosFinancieros", OdbcType.Double).Value = PasivosFinancieros;
+                    cmd.Parameters.Add("@Total_Presupuesto", OdbcType.Double).Value = Total_Presupuesto;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool UpdatePres(string PKidpresupuesto, string Mes, float gastosCorrientes, float gastosPersol, float gastosFinancieros, float TransferenciaCorriente, float TransferenciaCapital, float ActivosFijos, float ActivosFinancieros, float PasivosFinancieros, float Total_Presupuesto)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"UPDATE tbl_presupuesto SET tbl_presupuesto.PKidpresupuesto = ?, tbl_presupuesto.gastosCorrientes = ?, tbl_presupuesto.gastosPersol = ?, tbl_presupuesto.gastosFinancieros = ? , tbl_presupuesto.TransferenciaCorriente = ? , tbl_presupuesto.TransferenciaCapital = ? , tbl_presupuesto.ActivosFijos = ? , tbl_presupuesto.ActivosFinancieros = ? , tbl_presupuesto.PasivosFinancieros = ?, tbl_presupuesto.Total_Presupuesto = ? WHERE tbl_presupuesto.Mes = ?;";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+
+
+                    cmd.Parameters.Add("@PKidpresupuesto", OdbcType.Int).Value = PKidpresupuesto;
+                    cmd.Parameters.Add("@gastosCorrientes", OdbcType.Double).Value = gastosCorrientes;
+                    cmd.Parameters.Add("@gastosPersol", OdbcType.Double).Value = gastosPersol;
+                    cmd.Parameters.Add("@gastosFinancieros", OdbcType.Double).Value = gastosFinancieros;
+                    cmd.Parameters.Add("@TransferenciaCorriente", OdbcType.Double).Value = TransferenciaCorriente;
+                    cmd.Parameters.Add("@TransferenciaCapital", OdbcType.Double).Value = TransferenciaCapital;
+                    cmd.Parameters.Add("@ActivosFijos", OdbcType.Double).Value = ActivosFijos;
+                    cmd.Parameters.Add("@ActivosFinancieros", OdbcType.Double).Value = ActivosFinancieros;
+                    cmd.Parameters.Add("@PasivosFinancieros", OdbcType.Double).Value = PasivosFinancieros;
+                    cmd.Parameters.Add("@Total_Presupuesto", OdbcType.Double).Value = Total_Presupuesto;
+                    cmd.Parameters.Add("@Mes", OdbcType.Date).Value = Mes;
+
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool DeletePres(string Mes)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+                    #region Query
+                    string query = @"DELETE FROM tbl_presupuesto WHERE tbl_presupuesto.Mes = ?;";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@Mes", OdbcType.Date).Value = Mes;
+                    cmd.ExecuteNonQuery();
+
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        public DataTable ActualizarPres(string table, DataTable dt)
+        {
+            try
+            {
+                OdbcConnection con = new OdbcConnection("Dsn=Colchoneria");
+                String cadena = "";
+                con.Open();
+                cadena = "SELECT * FROM " + table;
+                OdbcDataAdapter datos = new OdbcDataAdapter(cadena, con);
+                datos.Fill(dt);
+                OdbcCommand comando = new OdbcCommand(cadena, con);
+                OdbcDataReader leer;
+                leer = comando.ExecuteReader();
+                con.Close();
+            }
+            catch
+            {
+                String textalert = " Error al actualizar datos, puede que no haya datos que mostrar ";
+                MessageBox.Show(textalert);
+            }
+            return dt;
+        }
+        public bool InsertMoneda(float MpnedaDolar, float MonedaEuro, float MonedaQuetzal)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=Colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"INSERT INTO tbl_moneda (MpnedaDolar,MonedaEuro,MonedaQuetzal)VALUE(?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+
+                    cmd.Parameters.Add("@MpnedaDolar", OdbcType.Double).Value = MpnedaDolar;
+                    cmd.Parameters.Add("@MonedaEuro", OdbcType.Double).Value = MonedaEuro;
+                    cmd.Parameters.Add("@MonedaQuetzal", OdbcType.Double).Value = MonedaQuetzal;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
     }
 }

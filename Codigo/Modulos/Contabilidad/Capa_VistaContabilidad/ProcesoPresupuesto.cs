@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Joselyne Aracely Rivera Cifuentes
+//    0901-17-5
+//Proceso Presupuesto
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,144 +13,74 @@ using System.Windows.Forms;
 
 namespace Capa_VistaContabilidad
 {
-    public partial class MantenimientoPresupuesto : Form
+    public partial class ProcesoPresupuesto : Form
     {
-        public MantenimientoPresupuesto()
+        public ProcesoPresupuesto()
         {
             InitializeComponent();
         }
         Capa_ControladorContabilidad.controlador crud = new Capa_ControladorContabilidad.controlador();
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            
-            bool resultado = crud.Insertpresupuesto(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
+            String Mes;
+            float gastosCorrientes, gastosPersol, gastosFinancieros, TransferenciaCorriente, TransferenciaCapital, ActivosFijos, ActivosFinancieros, PasivosFinancieros, Total_Presupuesto;
+
+            Mes = dtime_act.Text;
+            gastosCorrientes = float.Parse(textBox2.Text);
+            gastosPersol = float.Parse(textBox3.Text);
+            gastosFinancieros = float.Parse(textBox4.Text);
+            TransferenciaCorriente = float.Parse(textBox5.Text);
+            TransferenciaCapital = float.Parse(textBox6.Text);
+            ActivosFijos = float.Parse(textBox7.Text);
+            ActivosFinancieros = float.Parse(textBox8.Text);
+            PasivosFinancieros = float.Parse(textBox9.Text);
+            Total_Presupuesto = float.Parse(textBox9.Text);
+
+            bool resultado = crud.InsertPres(null, Mes, gastosCorrientes, gastosPersol, gastosFinancieros, TransferenciaCorriente, TransferenciaCapital, ActivosFijos, ActivosFinancieros, PasivosFinancieros, Total_Presupuesto);
             if (resultado)
             {
-                dataGridView1.Rows.Add(new object[] { textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text });
+                string confirmacion = "Presupuesto Agregado Correctamente";
+                MessageBox.Show(confirmacion);
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            bool resultado = crud.Updatepresupuesto(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text);
+            String Mes;
+            float gastosCorrientes, gastosPersol, gastosFinancieros, TransferenciaCorriente, TransferenciaCapital, ActivosFijos, ActivosFinancieros, PasivosFinancieros, Total_Presupuesto;
+
+            Mes = dtime_act.Text;
+            gastosCorrientes = float.Parse(textBox2.Text);
+            gastosPersol = float.Parse(textBox3.Text);
+            gastosFinancieros = float.Parse(textBox4.Text);
+            TransferenciaCorriente = float.Parse(textBox5.Text);
+            TransferenciaCapital = float.Parse(textBox6.Text);
+            ActivosFijos = float.Parse(textBox7.Text);
+            ActivosFinancieros = float.Parse(textBox8.Text);
+            PasivosFinancieros = float.Parse(textBox9.Text);
+            Total_Presupuesto = float.Parse(textBox9.Text);
+
+            bool resultado = crud.UpdatePres(null, Mes, gastosCorrientes, gastosPersol, gastosFinancieros, TransferenciaCorriente, TransferenciaCapital, ActivosFijos, ActivosFinancieros, PasivosFinancieros, Total_Presupuesto);
             if (resultado)
             {
-                dataGridView1.Rows.Add(new object[] { textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text});
+                string confirmacion = "Presupuesto Agregado Correctamente";
+                MessageBox.Show(confirmacion);
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bool resultado = crud.Deletepresupuestos(textBox1.Text);
+            bool resultado = crud.DeletePres(dtime_act.Text);
             if (resultado)
             {
-                dataGridView1.Rows.Add(new object[] { textBox1.Text });
+                dataGridView1.Rows.Add(new object[] { dtime_act.Text });
             }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            String col = "";
-            String data = "";
-            if (string.IsNullOrEmpty(textBox1.Text))
-            {
-                if (string.IsNullOrEmpty(textBox2.Text))
-                {
-                    if (string.IsNullOrEmpty(textBox3.Text))
-                    {
-                        if (string.IsNullOrEmpty(textBox4.Text))
-                        {
-                            if (string.IsNullOrEmpty(textBox5.Text))
-                            {
-                                if (string.IsNullOrEmpty(textBox6.Text))
-                                {
-                                    if (string.IsNullOrEmpty(textBox7.Text))
-                                       
-                                        {
-                                            if (string.IsNullOrEmpty(textBox8.Text))
-                                            {
-                                                if (string.IsNullOrEmpty(textBox9.Text))                                               
-                                                {
-                                                    if (string.IsNullOrEmpty(textBox10.Text))
-                                                    {
-                                                     
-                                        String textalert = " El campo buscar, se encuentra vacio. Debe llenar un solo campo para realizar la busqueda";
-                                        MessageBox.Show(textalert);
-                                    }
-                                    else
-                                    {
-                                        data = textBox9.Text;
-                                        col = "anotacion";
-                                    }
-                                }
-                                else
-                                {
-                                    data = textBox8.Text;
-                                    col = "monto";
-                                }
-                            }
-                            else
-                            {
-                                data = textBox7.Text;
-                                col = "descripcion  ";
-                            }
-                        }
-                        else
-                        {
-                            data = textBox6.Text;
-                            col = "fecha";
-                        }
-                    }
-                    else
-                    {
-                        data = textBox5.Text;
-                        col = "nombre";
-                    }
-                }
-                else
-                {
-                    data = textBox4.Text;
-                    col = "PKidCuenta";
-                }
-                        }
-                        else
-                        {
-                            data = textBox3.Text;
-                            col = "PKidArea";
-                        }
-                    }
-                    else
-                    {
-                        data = textBox2.Text;
-                        col = "PKidMoneda";
-                    }
-                }
-                else
-                {
-                    data = textBox1.Text;
-                    col = "PKidpresupuesto";
-                }
-            }
-            else
-            {
-                data = textBox10.Text;
-                col = "status";
-            }
-            DataTable dt = new DataTable();
-            //crud.BuscarProducto(data, col, dt);
-            crud.BuscarDatop(data, col, dt);
-            dataGridView1.DataSource = dt;
-
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
@@ -156,7 +89,6 @@ namespace Capa_VistaContabilidad
             textBox7.Clear();
             textBox8.Clear();
             textBox9.Clear();
-            textBox10.Clear();
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -164,8 +96,85 @@ namespace Capa_VistaContabilidad
             String table = "";
             DataTable dt = new DataTable();
             table = "tbl_presupuesto";
-            crud.Actualizarp(table, dt);
+            crud.ActualizarPres(table, dt);
             dataGridView1.DataSource = dt;
+        }
+
+        private void PocesoPresupuesto_Load(object sender, EventArgs e)
+        {
+            total.Text = "0.00";
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox2.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox3.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox4.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox5.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox6.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox7.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox8.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            float gt, gs, gm;
+            gt = float.Parse(textBox9.Text);
+            gs = float.Parse(total.Text);
+            gm = gt + gs;
+            total.Text = gm.ToString();
         }
     }
 }
