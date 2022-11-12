@@ -32,9 +32,9 @@ namespace Capa_VistaContabilidad
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_seleccionarcta = new FontAwesome.Sharp.IconButton();
             this.dgv_ctas = new System.Windows.Forms.DataGridView();
-            this.Cuentas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bnt_consultarCierreCtas = new FontAwesome.Sharp.IconButton();
             this.bnt_closecta = new FontAwesome.Sharp.IconButton();
             this.chckbox_auto = new System.Windows.Forms.CheckBox();
             this.groupBoxA = new System.Windows.Forms.GroupBox();
@@ -48,6 +48,8 @@ namespace Capa_VistaContabilidad
             this.label11 = new System.Windows.Forms.Label();
             this.groupBoxM = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.bnt_addpassman = new FontAwesome.Sharp.IconButton();
             this.txt_montopas = new System.Windows.Forms.TextBox();
             this.txt_razonpas = new System.Windows.Forms.TextBox();
@@ -64,8 +66,6 @@ namespace Capa_VistaContabilidad
             this.chckbox_manual = new System.Windows.Forms.CheckBox();
             this.lbl_cta = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ctas)).BeginInit();
             this.panel2.SuspendLayout();
@@ -109,17 +109,10 @@ namespace Capa_VistaContabilidad
             // dgv_ctas
             // 
             this.dgv_ctas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ctas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cuentas});
             this.dgv_ctas.Location = new System.Drawing.Point(12, 80);
             this.dgv_ctas.Name = "dgv_ctas";
             this.dgv_ctas.Size = new System.Drawing.Size(181, 346);
             this.dgv_ctas.TabIndex = 1;
-            // 
-            // Cuentas
-            // 
-            this.Cuentas.HeaderText = "Column1";
-            this.Cuentas.Name = "Cuentas";
             // 
             // label1
             // 
@@ -135,6 +128,7 @@ namespace Capa_VistaContabilidad
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.bnt_consultarCierreCtas);
             this.panel2.Controls.Add(this.bnt_closecta);
             this.panel2.Controls.Add(this.chckbox_auto);
             this.panel2.Controls.Add(this.groupBoxA);
@@ -148,6 +142,22 @@ namespace Capa_VistaContabilidad
             this.panel2.Size = new System.Drawing.Size(679, 531);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // bnt_consultarCierreCtas
+            // 
+            this.bnt_consultarCierreCtas.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.bnt_consultarCierreCtas.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.bnt_consultarCierreCtas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.bnt_consultarCierreCtas.IconSize = 45;
+            this.bnt_consultarCierreCtas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bnt_consultarCierreCtas.Location = new System.Drawing.Point(575, 458);
+            this.bnt_consultarCierreCtas.Name = "bnt_consultarCierreCtas";
+            this.bnt_consultarCierreCtas.Size = new System.Drawing.Size(75, 68);
+            this.bnt_consultarCierreCtas.TabIndex = 35;
+            this.bnt_consultarCierreCtas.Text = "Consultar Cierre";
+            this.bnt_consultarCierreCtas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bnt_consultarCierreCtas.UseVisualStyleBackColor = true;
+            this.bnt_consultarCierreCtas.Click += new System.EventHandler(this.bnt_consultarCierreCtas_Click);
             // 
             // bnt_closecta
             // 
@@ -214,6 +224,7 @@ namespace Capa_VistaContabilidad
             this.bnt_aceptpass.Text = "Aceptar";
             this.bnt_aceptpass.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bnt_aceptpass.UseVisualStyleBackColor = true;
+            this.bnt_aceptpass.Click += new System.EventHandler(this.bnt_aceptpass_Click);
             // 
             // txt_totpas
             // 
@@ -307,6 +318,24 @@ namespace Capa_VistaContabilidad
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pasivos";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(8, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 16);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Fecha :";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(89, 85);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(107, 20);
+            this.dateTimePicker2.TabIndex = 38;
             // 
             // bnt_addpassman
             // 
@@ -472,24 +501,6 @@ namespace Capa_VistaContabilidad
             this.label2.TabIndex = 0;
             this.label2.Text = "Cuenta :";
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(89, 85);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(107, 20);
-            this.dateTimePicker2.TabIndex = 38;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 89);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 16);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Fecha :";
-            // 
             // Cierre_Por_Cuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,10 +564,10 @@ namespace Capa_VistaContabilidad
         private FontAwesome.Sharp.IconButton bnt_aceptpass;
         private FontAwesome.Sharp.IconButton bnt_addpassman;
         private FontAwesome.Sharp.IconButton bnt_closecta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cuentas;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private FontAwesome.Sharp.IconButton bnt_consultarCierreCtas;
     }
 }

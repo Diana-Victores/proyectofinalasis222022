@@ -31,13 +31,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVistaReporteria, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\Reporteador\CapaVistaReporteria\bin\Debug\CapaVistaReporteria.dll</HintPath>
     </Reference>
     <Reference Include="Capa_ControladorContabilidad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Capa_ControladorContabilidad\bin\Debug\Capa_ControladorContabilidad.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_VistaConsultas">
+      <HintPath>..\..\..\Componentes\Consultas\Capa_Vista\bin\Debug\Capa_VistaConsultas.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -84,6 +96,8 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -98,6 +112,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivosFijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivosFijos.Designer.cs">
+      <DependentUpon>ActivosFijos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cierre General.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +136,17 @@
     <Compile Include="Confirmar Cierre Por Cuentas.designer.cs">
       <DependentUpon>Confirmar Cierre Por Cuentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetallePoliza.cs">
+    <Compile Include="ConsultaCCtas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetallePoliza.Designer.cs">
-      <DependentUpon>DetallePoliza.cs</DependentUpon>
+    <Compile Include="ConsultaCCtas.designer.cs">
+      <DependentUpon>ConsultaCCtas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCGeneral.designer.cs">
+      <DependentUpon>ConsultaCGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="EstadosFinancieros.cs">
       <SubType>Form</SubType>
@@ -133,12 +159,6 @@
     </Compile>
     <Compile Include="GeneracionPoliza.designer.cs">
       <DependentUpon>GeneracionPoliza.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MantenimientoActivos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenimientoActivos.designer.cs">
-      <DependentUpon>MantenimientoActivos.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoEncabezadoCuentas.cs">
       <SubType>Form</SubType>
@@ -158,6 +178,12 @@
     <Compile Include="MantenimientoDetallePolizaContable.designer.cs">
       <DependentUpon>MantenimientoDetallePolizaContable.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMoneda.Designer.cs">
+      <DependentUpon>MantenimientoMoneda.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoTipodeCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,15 +202,18 @@
     <Compile Include="Nuevo_MDI.designer.cs">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presupuesto.cs">
+    <Compile Include="ProcesoPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presupuesto.designer.cs">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
+    <Compile Include="ProcesoPresupuesto.Designer.cs">
+      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ActivosFijos.resx">
+      <DependentUpon>ActivosFijos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cierre General.resx">
       <DependentUpon>Cierre General.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,17 +223,17 @@
     <EmbeddedResource Include="Confirmar Cierre Por Cuentas.resx">
       <DependentUpon>Confirmar Cierre Por Cuentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetallePoliza.resx">
-      <DependentUpon>DetallePoliza.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaCCtas.resx">
+      <DependentUpon>ConsultaCCtas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCGeneral.resx">
+      <DependentUpon>ConsultaCGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadosFinancieros.resx">
       <DependentUpon>EstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneracionPoliza.resx">
       <DependentUpon>GeneracionPoliza.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoActivos.resx">
-      <DependentUpon>MantenimientoActivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoEncabezadoCuentas.resx">
       <DependentUpon>MantenimientoEncabezadoCuentas.cs</DependentUpon>
@@ -215,6 +244,9 @@
     <EmbeddedResource Include="MantenimientoDetallePolizaContable.resx">
       <DependentUpon>MantenimientoDetallePolizaContable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMoneda.resx">
+      <DependentUpon>MantenimientoMoneda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoTipodeCuentas.resx">
       <DependentUpon>MantenimientoTipodeCuentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,13 +256,16 @@
     <EmbeddedResource Include="Nuevo_MDI.resx">
       <DependentUpon>Nuevo_MDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presupuesto.resx">
-      <DependentUpon>Presupuesto.cs</DependentUpon>
+    <EmbeddedResource Include="ProcesoPresupuesto.resx">
+      <DependentUpon>ProcesoPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

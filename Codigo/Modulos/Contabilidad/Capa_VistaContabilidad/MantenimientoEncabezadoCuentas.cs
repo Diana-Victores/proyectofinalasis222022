@@ -29,7 +29,7 @@ namespace Capa_VistaContabilidad
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "8002";
+            NavegadorVista.Navegador.idApp = "8003";
             TextBox[] Grupotextbox = { textIDEncabezado, textNombreEncabezado, textStatusEncabezado};
             TextBox[] Idtextbox = { textIDEncabezado };
             navegador1.textbox = Grupotextbox;
@@ -37,6 +37,11 @@ namespace Capa_VistaContabilidad
             navegador1.textboxi = Idtextbox;
             navegador1.actual = this;
             navegador1.cargar(dgvClaseCuentaEncabezado, Grupotextbox, "colchoneria");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayuda/AyudaManteniminetoEncabezadoCuenta.chm");
         }
     }
 }

@@ -44,6 +44,7 @@ namespace Capa_VistaContabilidad
             this.btn_ReportesConta = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.panelActivos = new System.Windows.Forms.Panel();
+            this.btn_Moneda = new System.Windows.Forms.Button();
             this.btn_MantTEFinanc = new System.Windows.Forms.Button();
             this.bnt_MantActF = new System.Windows.Forms.Button();
             this.btn_MantDetPol = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@ namespace Capa_VistaContabilidad
             this.btn_CierreG = new System.Windows.Forms.Button();
             this.btn_CierrePC = new System.Windows.Forms.Button();
             this.btn_RevPresp = new System.Windows.Forms.Button();
-            this.btn_modPresp = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -165,6 +165,7 @@ namespace Capa_VistaContabilidad
             this.btn_ConsultaInt.Text = "Consulta Inteligente Avanzada";
             this.btn_ConsultaInt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ConsultaInt.UseVisualStyleBackColor = true;
+            this.btn_ConsultaInt.Click += new System.EventHandler(this.btn_ConsultaInt_Click);
             // 
             // button1
             // 
@@ -254,6 +255,7 @@ namespace Capa_VistaContabilidad
             this.btn_ReportesConta.Text = "Reportes Contabilidad";
             this.btn_ReportesConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ReportesConta.UseVisualStyleBackColor = true;
+            this.btn_ReportesConta.Click += new System.EventHandler(this.btn_ReportesConta_Click);
             // 
             // btnProveedor
             // 
@@ -277,6 +279,7 @@ namespace Capa_VistaContabilidad
             // panelActivos
             // 
             this.panelActivos.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panelActivos.Controls.Add(this.btn_Moneda);
             this.panelActivos.Controls.Add(this.btn_MantTEFinanc);
             this.panelActivos.Controls.Add(this.bnt_MantActF);
             this.panelActivos.Controls.Add(this.btn_MantDetPol);
@@ -289,6 +292,22 @@ namespace Capa_VistaContabilidad
             this.panelActivos.Name = "panelActivos";
             this.panelActivos.Size = new System.Drawing.Size(220, 316);
             this.panelActivos.TabIndex = 3;
+            // 
+            // btn_Moneda
+            // 
+            this.btn_Moneda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Moneda.FlatAppearance.BorderSize = 0;
+            this.btn_Moneda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Moneda.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_Moneda.Location = new System.Drawing.Point(0, 245);
+            this.btn_Moneda.Name = "btn_Moneda";
+            this.btn_Moneda.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_Moneda.Size = new System.Drawing.Size(220, 35);
+            this.btn_Moneda.TabIndex = 10;
+            this.btn_Moneda.Text = "Mantenimiento Moneda";
+            this.btn_Moneda.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_Moneda.UseVisualStyleBackColor = true;
+            this.btn_Moneda.Click += new System.EventHandler(this.btn_Moneda_Click);
             // 
             // btn_MantTEFinanc
             // 
@@ -428,7 +447,6 @@ namespace Capa_VistaContabilidad
             this.panelPolizas.Controls.Add(this.btn_CierreG);
             this.panelPolizas.Controls.Add(this.btn_CierrePC);
             this.panelPolizas.Controls.Add(this.btn_RevPresp);
-            this.panelPolizas.Controls.Add(this.btn_modPresp);
             this.panelPolizas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPolizas.Location = new System.Drawing.Point(0, 126);
             this.panelPolizas.Name = "panelPolizas";
@@ -441,7 +459,7 @@ namespace Capa_VistaContabilidad
             this.btn_EFinancieros.FlatAppearance.BorderSize = 0;
             this.btn_EFinancieros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EFinancieros.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_EFinancieros.Location = new System.Drawing.Point(0, 140);
+            this.btn_EFinancieros.Location = new System.Drawing.Point(0, 105);
             this.btn_EFinancieros.Name = "btn_EFinancieros";
             this.btn_EFinancieros.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_EFinancieros.Size = new System.Drawing.Size(220, 35);
@@ -457,7 +475,7 @@ namespace Capa_VistaContabilidad
             this.btn_CierreG.FlatAppearance.BorderSize = 0;
             this.btn_CierreG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CierreG.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_CierreG.Location = new System.Drawing.Point(0, 105);
+            this.btn_CierreG.Location = new System.Drawing.Point(0, 70);
             this.btn_CierreG.Name = "btn_CierreG";
             this.btn_CierreG.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_CierreG.Size = new System.Drawing.Size(220, 35);
@@ -473,7 +491,7 @@ namespace Capa_VistaContabilidad
             this.btn_CierrePC.FlatAppearance.BorderSize = 0;
             this.btn_CierrePC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CierrePC.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_CierrePC.Location = new System.Drawing.Point(0, 70);
+            this.btn_CierrePC.Location = new System.Drawing.Point(0, 35);
             this.btn_CierrePC.Name = "btn_CierrePC";
             this.btn_CierrePC.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_CierrePC.Size = new System.Drawing.Size(220, 35);
@@ -489,7 +507,7 @@ namespace Capa_VistaContabilidad
             this.btn_RevPresp.FlatAppearance.BorderSize = 0;
             this.btn_RevPresp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RevPresp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_RevPresp.Location = new System.Drawing.Point(0, 35);
+            this.btn_RevPresp.Location = new System.Drawing.Point(0, 0);
             this.btn_RevPresp.Name = "btn_RevPresp";
             this.btn_RevPresp.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btn_RevPresp.Size = new System.Drawing.Size(220, 35);
@@ -498,22 +516,6 @@ namespace Capa_VistaContabilidad
             this.btn_RevPresp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RevPresp.UseVisualStyleBackColor = true;
             this.btn_RevPresp.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // btn_modPresp
-            // 
-            this.btn_modPresp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_modPresp.FlatAppearance.BorderSize = 0;
-            this.btn_modPresp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modPresp.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_modPresp.Location = new System.Drawing.Point(0, 0);
-            this.btn_modPresp.Name = "btn_modPresp";
-            this.btn_modPresp.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_modPresp.Size = new System.Drawing.Size(220, 35);
-            this.btn_modPresp.TabIndex = 0;
-            this.btn_modPresp.Text = "Modificacion Presupuestos";
-            this.btn_modPresp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modPresp.UseVisualStyleBackColor = true;
-            this.btn_modPresp.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnCompras
             // 
@@ -565,7 +567,7 @@ namespace Capa_VistaContabilidad
             this.Controls.Add(this.panelSideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MinimumSize = new System.Drawing.Size(900, 600);
+            this.MinimumSize = new System.Drawing.Size(900, 599);
             this.Name = "Nuevo_MDI";
             this.Text = "Modulo Contabilidad";
             this.Load += new System.EventHandler(this.central_Compra_Load);
@@ -589,7 +591,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Button btn_RevPresp;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Panel panelPolizas;
-        private System.Windows.Forms.Button btn_modPresp;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -615,5 +616,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Button btn_ConsultaInt;
         private System.Windows.Forms.Button btn_Security;
         private System.Windows.Forms.Button btn_ReportesConta;
+        private System.Windows.Forms.Button btn_Moneda;
     }
 }

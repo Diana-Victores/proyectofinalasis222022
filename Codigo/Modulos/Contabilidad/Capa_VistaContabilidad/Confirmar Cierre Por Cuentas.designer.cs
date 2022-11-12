@@ -267,8 +267,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_totpas;
-        private System.Windows.Forms.TextBox txt_totact;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -276,5 +274,7 @@ namespace Capa_VistaContabilidad
         private FontAwesome.Sharp.IconButton btn_cancel;
         private FontAwesome.Sharp.IconButton bnt_savectas;
         public System.Windows.Forms.Label lbl_namecta;
+        public System.Windows.Forms.TextBox txt_totpas;
+        public System.Windows.Forms.TextBox txt_totact;
     }
 }

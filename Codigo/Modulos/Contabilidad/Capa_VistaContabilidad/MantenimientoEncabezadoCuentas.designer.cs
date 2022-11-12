@@ -40,6 +40,7 @@ namespace Capa_VistaContabilidad
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvClaseCuentaEncabezado = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -154,6 +155,17 @@ namespace Capa_VistaContabilidad
             this.dgvClaseCuentaEncabezado.Name = "dgvClaseCuentaEncabezado";
             this.dgvClaseCuentaEncabezado.Size = new System.Drawing.Size(737, 194);
             this.dgvClaseCuentaEncabezado.TabIndex = 0;
+            this.dgvClaseCuentaEncabezado.Tag = "tbl_encabezadoclasecuenta";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(696, 215);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Ayuda";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MantenimientoEncabezadoCuentas
             // 
@@ -161,6 +173,7 @@ namespace Capa_VistaContabilidad
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(852, 724);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -188,6 +201,7 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvClaseCuentaEncabezado;
+        private System.Windows.Forms.Button button1;
     }
 }
 
