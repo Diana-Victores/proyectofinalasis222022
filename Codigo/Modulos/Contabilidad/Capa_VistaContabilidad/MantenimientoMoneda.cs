@@ -21,18 +21,30 @@ namespace Capa_VistaContabilidad
         }
         Capa_ControladorContabilidad.controlador crud = new Capa_ControladorContabilidad.controlador();
 
+        //private void navegador1_Load(object sender, EventArgs e)
+        //{
+        //    NavegadorVista.Navegador.idApp = "8009";
+        //    TextBox[] Grupotextbox = { txrtMQzt, txtDolar , txtEuro };
+        //    TextBox[] Idtextbox = { txrtMQzt };
+        //    navegador1.textbox = Grupotextbox;
+        //    navegador1.tabla = dataGridView1;
+        //    navegador1.textboxi = Idtextbox;
+        //    navegador1.actual = this;
+        //    navegador1.cargar(dataGridView1, Grupotextbox, "Colchoneria");
+        //}
+
         private void button1_Click(object sender, EventArgs e)
         {
             double quetzales, dolar, euro;
             try
             {
-                quetzales = Convert.ToDouble(txtCantidad.Text);
+                quetzales = Convert.ToDouble(textBox1.Text);
                 dolar = quetzales / 0.13;
                 euro = quetzales / 0.13;
-                txrtMQzt.Text = quetzales.ToString();
-                txrtMQzts.Text = quetzales.ToString();
-                txtDolar.Text = dolar.ToString();
-                txtEuro.Text = euro.ToString();
+                textBox2.Text = quetzales.ToString();
+                textBox4.Text = quetzales.ToString();
+                textBox3.Text = dolar.ToString();
+                textBox5.Text = euro.ToString();
             }
             catch (Exception error)
             {
@@ -40,14 +52,14 @@ namespace Capa_VistaContabilidad
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            txtCantidad.Text = String.Empty;
-            txrtMQzt.Text = String.Empty;
-            txtDolar.Text = String.Empty;
-            txrtMQzts.Text = String.Empty;
-            txtEuro.Text = String.Empty;
-            txtCantidad.Focus();
+            textBox1.Text = String.Empty;
+            textBox2.Text = String.Empty;
+            textBox3.Text = String.Empty;
+            textBox4.Text = String.Empty;
+            textBox5.Text = String.Empty;
+            textBox1.Focus();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -58,25 +70,13 @@ namespace Capa_VistaContabilidad
             }
         }
 
-        private void navegador1_Load(object sender, EventArgs e)
-        {
-            NavegadorVista.Navegador.idApp = "8009";
-            TextBox[] Grupotextbox = { txrtMQzt, txtDolar , txtEuro };
-            TextBox[] Idtextbox = { txrtMQzt };
-            navegador1.textbox = Grupotextbox;
-            navegador1.tabla = dataGridView1;
-            navegador1.textboxi = Idtextbox;
-            navegador1.actual = this;
-            navegador1.cargar(dataGridView1, Grupotextbox, "Colchoneria");
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             float MpnedaDolar, MonedaEuro, MonedaQuetzal;
 
-            MpnedaDolar = float.Parse(txtDolar.Text);
-            MonedaEuro = float.Parse(txtEuro.Text);
-            MonedaQuetzal = float.Parse(txtEuro.Text);
+            MpnedaDolar = float.Parse(textBox3.Text);
+            MonedaEuro = float.Parse(textBox5.Text);
+            MonedaQuetzal = float.Parse(textBox3.Text);
 
             bool resultado = crud.InsertMoneda(MpnedaDolar, MonedaEuro, MonedaQuetzal);
             if (resultado)
