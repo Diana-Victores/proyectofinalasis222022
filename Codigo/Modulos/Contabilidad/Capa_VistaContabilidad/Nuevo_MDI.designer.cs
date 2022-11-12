@@ -44,6 +44,7 @@ namespace Capa_VistaContabilidad
             this.btn_ReportesConta = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.panelActivos = new System.Windows.Forms.Panel();
+            this.btn_Moneda = new System.Windows.Forms.Button();
             this.btn_MantTEFinanc = new System.Windows.Forms.Button();
             this.bnt_MantActF = new System.Windows.Forms.Button();
             this.btn_MantDetPol = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@ namespace Capa_VistaContabilidad
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_Moneda = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMant.SuspendLayout();
             this.panelEstadosF.SuspendLayout();
@@ -255,6 +255,7 @@ namespace Capa_VistaContabilidad
             this.btn_ReportesConta.Text = "Reportes Contabilidad";
             this.btn_ReportesConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ReportesConta.UseVisualStyleBackColor = true;
+            this.btn_ReportesConta.Click += new System.EventHandler(this.btn_ReportesConta_Click);
             // 
             // btnProveedor
             // 
@@ -291,6 +292,22 @@ namespace Capa_VistaContabilidad
             this.panelActivos.Name = "panelActivos";
             this.panelActivos.Size = new System.Drawing.Size(220, 316);
             this.panelActivos.TabIndex = 3;
+            // 
+            // btn_Moneda
+            // 
+            this.btn_Moneda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Moneda.FlatAppearance.BorderSize = 0;
+            this.btn_Moneda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Moneda.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btn_Moneda.Location = new System.Drawing.Point(0, 245);
+            this.btn_Moneda.Name = "btn_Moneda";
+            this.btn_Moneda.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btn_Moneda.Size = new System.Drawing.Size(220, 35);
+            this.btn_Moneda.TabIndex = 10;
+            this.btn_Moneda.Text = "Mantenimiento Moneda";
+            this.btn_Moneda.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_Moneda.UseVisualStyleBackColor = true;
+            this.btn_Moneda.Click += new System.EventHandler(this.btn_Moneda_Click);
             // 
             // btn_MantTEFinanc
             // 
@@ -539,22 +556,6 @@ namespace Capa_VistaContabilidad
             this.pictureBox1.Size = new System.Drawing.Size(220, 87);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_Moneda
-            // 
-            this.btn_Moneda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Moneda.FlatAppearance.BorderSize = 0;
-            this.btn_Moneda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Moneda.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btn_Moneda.Location = new System.Drawing.Point(0, 245);
-            this.btn_Moneda.Name = "btn_Moneda";
-            this.btn_Moneda.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btn_Moneda.Size = new System.Drawing.Size(220, 35);
-            this.btn_Moneda.TabIndex = 10;
-            this.btn_Moneda.Text = "Mantenimiento Moneda";
-            this.btn_Moneda.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_Moneda.UseVisualStyleBackColor = true;
-            this.btn_Moneda.Click += new System.EventHandler(this.btn_Moneda_Click);
             // 
             // Nuevo_MDI
             // 

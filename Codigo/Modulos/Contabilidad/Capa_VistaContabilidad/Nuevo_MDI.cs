@@ -409,11 +409,7 @@ namespace Capa_VistaContabilidad
 
         private void btn_MantTCuenta_Click(object sender, EventArgs e)
         {
-            //MantenimientoEstadosFinancieros mantEF = new MantenimientoEstadosFinancieros();
-            //mantEF.MdiParent = this;
-            //mantEF.StartPosition = FormStartPosition.CenterScreen;
-            //mantEF.Show();
-            //hideSubMenu();
+            
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -423,12 +419,12 @@ namespace Capa_VistaContabilidad
 
         private void button2_Click_2(object sender, EventArgs e)
         {
-            DetallePoliza mantclas = new DetallePoliza();
+            //DetallePoliza mantclas = new DetallePoliza();
 
-            mantclas.MdiParent = this;
-            mantclas.StartPosition = FormStartPosition.CenterScreen;
-            mantclas.Show();
-            hideSubMenu();
+            //mantclas.MdiParent = this;
+            //mantclas.StartPosition = FormStartPosition.CenterScreen;
+            //mantclas.Show();
+            //hideSubMenu();
         }
 
         private void btn_ConsultaInt_Click(object sender, EventArgs e)
@@ -447,6 +443,15 @@ namespace Capa_VistaContabilidad
             presp.StartPosition = FormStartPosition.CenterScreen;
             presp.Show();
             hideSubMenu();
+        }
+
+        private void btn_ReportesConta_Click(object sender, EventArgs e)
+        {
+            //Reporte repor = new Reporte();
+            //repor.MdiParent = this;
+            //repor.StartPosition = FormStartPosition.CenterScreen;
+            //repor.Show();
+            //hideSubMenu();
         }
     }
 }

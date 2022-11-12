@@ -493,11 +493,11 @@ namespace Capa_ControladorContabilidad
         {
             OdbcConnection con = new OdbcConnection("Dsn=colchoneria");
             con.Open();
-            OdbcCommand comando = new OdbcCommand("SELECT nombre_cuenta FROM tbl_cuentas", con);
+            OdbcCommand comando = new OdbcCommand("SELECT nombre_tipocuenta FROM  tbl_tipocuenta", con);
             OdbcDataReader leer = comando.ExecuteReader();
             while (leer.Read())
             {
-                cbo_boxctas.Items.Add(leer["nombre_cuenta"].ToString());
+                cbo_boxctas.Items.Add(leer["nombre_tipocuenta"].ToString());
             }
         }
 
@@ -610,7 +610,7 @@ namespace Capa_ControladorContabilidad
             try
             {
                 con.Open();
-                cadena = "SELECT nombre_cuenta FROM  tbl_cuentas";
+                cadena = "SELECT nombre_tipocuenta FROM  tbl_tipocuenta";
                 OdbcDataAdapter datos = new OdbcDataAdapter(cadena, con);
                 datos.Fill(dt);
                 OdbcCommand comando = new OdbcCommand(cadena, con);
@@ -728,7 +728,6 @@ namespace Capa_ControladorContabilidad
                 return false;
             }
         }
-        //Joselyne Rivera 0901-17-5
         public bool InsertPres(string PKidpresupuesto, string Mes, float gastosCorrientes, float gastosPersol, float gastosFinancieros, float TransferenciaCorriente, float TransferenciaCapital, float ActivosFijos, float ActivosFinancieros, float PasivosFinancieros, float Total_Presupuesto)
         {
             try
@@ -768,7 +767,7 @@ namespace Capa_ControladorContabilidad
             }
         }
 
-        //Joselyne Rivera 0901-17-5
+
         public bool UpdatePres(string PKidpresupuesto, string Mes, float gastosCorrientes, float gastosPersol, float gastosFinancieros, float TransferenciaCorriente, float TransferenciaCapital, float ActivosFijos, float ActivosFinancieros, float PasivosFinancieros, float Total_Presupuesto)
         {
             try
@@ -811,7 +810,6 @@ namespace Capa_ControladorContabilidad
             }
         }
 
-        //Joselyne Rivera 0901-17-5
         public bool DeletePres(string Mes)
         {
             try
@@ -840,8 +838,6 @@ namespace Capa_ControladorContabilidad
                 return false;
             }
         }
-
-        //Joselyne Rivera 0901-17-5
         public DataTable ActualizarPres(string table, DataTable dt)
         {
             try
@@ -864,8 +860,6 @@ namespace Capa_ControladorContabilidad
             }
             return dt;
         }
-
-        //Joselyne Rivera 0901-17-5
         public bool InsertMoneda(float MpnedaDolar, float MonedaEuro, float MonedaQuetzal)
         {
             try

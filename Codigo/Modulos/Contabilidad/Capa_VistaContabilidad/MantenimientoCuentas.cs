@@ -23,17 +23,17 @@ namespace Capa_VistaContabilidad
             InitializeComponent();
         }
 
-        private void navegador1_Load(object sender, EventArgs e)
+        private void Navegador1_Load(object sender, EventArgs e)
         {
             NavegadorVista.Navegador.idApp = "8002";
             TextBox[] Grupotextbox = { textIDCuenta, textTCuenta,
                 textNombreCuenta,textCargo, textAbono, textSaldo, textStatus };
             TextBox[] Idtextbox = { textIDCuenta, textTCuenta };
-            navegador1.textbox = Grupotextbox;
-            navegador1.tabla = dgvCuentasM;
-            navegador1.textboxi = Idtextbox;
-            navegador1.actual = this;
-            navegador1.cargar(dgvCuentasM, Grupotextbox, "colchoneria");
+            navegador_ctas.textbox = Grupotextbox;
+            navegador_ctas.tabla = dgvCuentasM;
+            navegador_ctas.textboxi = Idtextbox;
+            navegador_ctas.actual = this;
+            navegador_ctas.cargar(dgvCuentasM, Grupotextbox, "colchoneria");
         }
 
         private void btnTCuenta_Click(object sender, EventArgs e)
@@ -78,6 +78,27 @@ namespace Capa_VistaContabilidad
         {
             cn.llenarcombo("tbl_tipocuenta", cboTCuneta, 1);
             cn.llenarcombo("tbl_cuentas", cboNombreCuenta, 2);
+        }
+
+
+
+        private void navegador_ctas_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "8002";
+            TextBox[] Grupotextbox = { textIDCuenta, textTCuenta, textNombreCuenta, textCargo, textAbono, textSaldo, textStatus };
+            TextBox[] Idtextbox = { textIDCuenta, textTCuenta };
+            navegador_ctas.textbox = Grupotextbox;
+            navegador_ctas.tabla = dgvCuentasM;
+            navegador_ctas.textboxi = Idtextbox;
+            navegador_ctas.actual = this;
+            navegador_ctas.cargar(dgvCuentasM, Grupotextbox, "colchoneria");
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

@@ -30,8 +30,12 @@ namespace Capa_VistaContabilidad
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.navegador1 = new NavegadorVista.Navegador();
+            this.navegador_ctas = new NavegadorVista.Navegador();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textNombreCuenta = new System.Windows.Forms.TextBox();
+            this.textTCuenta = new System.Windows.Forms.TextBox();
+            this.btnTipoCuenta = new System.Windows.Forms.Button();
+            this.btnTCuenta = new System.Windows.Forms.Button();
             this.textStatus = new System.Windows.Forms.TextBox();
             this.cboNombreCuenta = new System.Windows.Forms.ComboBox();
             this.cboTCuneta = new System.Windows.Forms.ComboBox();
@@ -48,10 +52,7 @@ namespace Capa_VistaContabilidad
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvCuentasM = new System.Windows.Forms.DataGridView();
-            this.textNombreCuenta = new System.Windows.Forms.TextBox();
-            this.textTCuenta = new System.Windows.Forms.TextBox();
-            this.btnTipoCuenta = new System.Windows.Forms.Button();
-            this.btnTCuenta = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -60,7 +61,7 @@ namespace Capa_VistaContabilidad
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.navegador1);
+            this.groupBox1.Controls.Add(this.navegador_ctas);
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.groupBox1.Location = new System.Drawing.Point(15, 17);
             this.groupBox1.Name = "groupBox1";
@@ -69,17 +70,18 @@ namespace Capa_VistaContabilidad
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navegador";
             // 
-            // navegador1
+            // navegador_ctas
             // 
-            this.navegador1.Location = new System.Drawing.Point(27, 20);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(786, 167);
-            this.navegador1.TabIndex = 0;
-            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            this.navegador_ctas.Location = new System.Drawing.Point(18, 17);
+            this.navegador_ctas.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.navegador_ctas.Name = "navegador_ctas";
+            this.navegador_ctas.Size = new System.Drawing.Size(784, 172);
+            this.navegador_ctas.TabIndex = 1;
+            this.navegador_ctas.Load += new System.EventHandler(this.navegador_ctas_Load);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.textNombreCuenta);
             this.groupBox2.Controls.Add(this.textTCuenta);
             this.groupBox2.Controls.Add(this.btnTipoCuenta);
@@ -105,6 +107,42 @@ namespace Capa_VistaContabilidad
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
+            // 
+            // textNombreCuenta
+            // 
+            this.textNombreCuenta.Location = new System.Drawing.Point(359, 100);
+            this.textNombreCuenta.Name = "textNombreCuenta";
+            this.textNombreCuenta.Size = new System.Drawing.Size(100, 21);
+            this.textNombreCuenta.TabIndex = 21;
+            this.textNombreCuenta.Tag = "pkid_encabezadocuenta";
+            // 
+            // textTCuenta
+            // 
+            this.textTCuenta.Location = new System.Drawing.Point(359, 55);
+            this.textTCuenta.Name = "textTCuenta";
+            this.textTCuenta.Size = new System.Drawing.Size(100, 21);
+            this.textTCuenta.TabIndex = 20;
+            this.textTCuenta.Tag = "pkid_tipocuenta";
+            // 
+            // btnTipoCuenta
+            // 
+            this.btnTipoCuenta.Location = new System.Drawing.Point(305, 99);
+            this.btnTipoCuenta.Name = "btnTipoCuenta";
+            this.btnTipoCuenta.Size = new System.Drawing.Size(33, 23);
+            this.btnTipoCuenta.TabIndex = 19;
+            this.btnTipoCuenta.Text = "?";
+            this.btnTipoCuenta.UseVisualStyleBackColor = true;
+            this.btnTipoCuenta.Click += new System.EventHandler(this.btnTipoCuenta_Click);
+            // 
+            // btnTCuenta
+            // 
+            this.btnTCuenta.Location = new System.Drawing.Point(305, 59);
+            this.btnTCuenta.Name = "btnTCuenta";
+            this.btnTCuenta.Size = new System.Drawing.Size(33, 23);
+            this.btnTCuenta.TabIndex = 18;
+            this.btnTCuenta.Text = "?";
+            this.btnTCuenta.UseVisualStyleBackColor = true;
+            this.btnTCuenta.Click += new System.EventHandler(this.btnTCuenta_Click);
             // 
             // textStatus
             // 
@@ -256,39 +294,15 @@ namespace Capa_VistaContabilidad
             this.dgvCuentasM.TabIndex = 0;
             this.dgvCuentasM.Tag = "tbl_cuentas";
             // 
-            // textNombreCuenta
+            // button1
             // 
-            this.textNombreCuenta.Location = new System.Drawing.Point(359, 100);
-            this.textNombreCuenta.Name = "textNombreCuenta";
-            this.textNombreCuenta.Size = new System.Drawing.Size(100, 21);
-            this.textNombreCuenta.TabIndex = 21;
-            // 
-            // textTCuenta
-            // 
-            this.textTCuenta.Location = new System.Drawing.Point(359, 55);
-            this.textTCuenta.Name = "textTCuenta";
-            this.textTCuenta.Size = new System.Drawing.Size(100, 21);
-            this.textTCuenta.TabIndex = 20;
-            // 
-            // btnTipoCuenta
-            // 
-            this.btnTipoCuenta.Location = new System.Drawing.Point(305, 99);
-            this.btnTipoCuenta.Name = "btnTipoCuenta";
-            this.btnTipoCuenta.Size = new System.Drawing.Size(33, 23);
-            this.btnTipoCuenta.TabIndex = 19;
-            this.btnTipoCuenta.Text = "?";
-            this.btnTipoCuenta.UseVisualStyleBackColor = true;
-            this.btnTipoCuenta.Click += new System.EventHandler(this.btnTipoCuenta_Click);
-            // 
-            // btnTCuenta
-            // 
-            this.btnTCuenta.Location = new System.Drawing.Point(305, 59);
-            this.btnTCuenta.Name = "btnTCuenta";
-            this.btnTCuenta.Size = new System.Drawing.Size(33, 23);
-            this.btnTCuenta.TabIndex = 18;
-            this.btnTCuenta.Text = "?";
-            this.btnTCuenta.UseVisualStyleBackColor = true;
-            this.btnTCuenta.Click += new System.EventHandler(this.btnTCuenta_Click);
+            this.button1.Location = new System.Drawing.Point(720, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Ayuda";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MantenimientoCuentas
             // 
@@ -314,7 +328,6 @@ namespace Capa_VistaContabilidad
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -336,5 +349,7 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.TextBox textTCuenta;
         private System.Windows.Forms.Button btnTipoCuenta;
         private System.Windows.Forms.Button btnTCuenta;
+        private NavegadorVista.Navegador navegador_ctas;
+        private System.Windows.Forms.Button button1;
     }
 }
