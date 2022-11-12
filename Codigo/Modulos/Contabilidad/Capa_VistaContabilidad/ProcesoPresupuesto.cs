@@ -20,6 +20,7 @@ namespace Capa_VistaContabilidad
             InitializeComponent();
         }
         Capa_ControladorContabilidad.controlador crud = new Capa_ControladorContabilidad.controlador();
+        float gt, gs, gm;
 
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace Capa_VistaContabilidad
                 string confirmacion = "Presupuesto Agregado Correctamente";
                 MessageBox.Show(confirmacion);
             }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -75,7 +77,11 @@ namespace Capa_VistaContabilidad
             bool resultado = crud.DeletePres(dtime_act.Text);
             if (resultado)
             {
-                dataGridView1.Rows.Add(new object[] { dtime_act.Text });
+                String table = "";
+                DataTable dt = new DataTable();
+                table = "tbl_presupuesto";
+                crud.ActualizarT(table, dt);
+                dataGridView1.DataSource = dt;
             }
         }
 
@@ -107,7 +113,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+           
             gt = float.Parse(textBox2.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
@@ -116,7 +122,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+           
             gt = float.Parse(textBox3.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
@@ -125,7 +131,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+            
             gt = float.Parse(textBox4.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
@@ -134,7 +140,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+            
             gt = float.Parse(textBox5.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
@@ -143,7 +149,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+            
             gt = float.Parse(textBox6.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
@@ -152,7 +158,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+            
             gt = float.Parse(textBox7.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
@@ -161,7 +167,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+            
             gt = float.Parse(textBox8.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
@@ -170,7 +176,7 @@ namespace Capa_VistaContabilidad
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            float gt, gs, gm;
+            
             gt = float.Parse(textBox9.Text);
             gs = float.Parse(total.Text);
             gm = gt + gs;
