@@ -149,5 +149,10 @@ namespace Capa_VistaContabilidad
                 dataGridView1.Rows.Add(new object[] { item[0].ToString(), item[1].ToString(), item[2].ToString(), item[3].ToString(), item[4].ToString(), item[5].ToString(), item[6].ToString() });
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

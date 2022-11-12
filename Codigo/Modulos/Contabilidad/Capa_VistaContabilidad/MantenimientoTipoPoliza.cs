@@ -22,7 +22,7 @@ namespace Capa_VistaContabilidad
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "8003";
+            NavegadorVista.Navegador.idApp = "8006";
             TextBox[] Grupotextbox = { textIDTipoPoliza, textDescripcionTPoliza,
                 textStatusTPoliza };
             TextBox[] Idtextbox = { textIDTipoPoliza };
@@ -31,6 +31,11 @@ namespace Capa_VistaContabilidad
             navegador1.textboxi = Idtextbox;
             navegador1.actual = this;
             navegador1.cargar(dgvTipoPoliza, Grupotextbox, "colchoneria");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayuda/AyudaMantenimientoTipoPoliza (2).chm");
         }
     }
 }

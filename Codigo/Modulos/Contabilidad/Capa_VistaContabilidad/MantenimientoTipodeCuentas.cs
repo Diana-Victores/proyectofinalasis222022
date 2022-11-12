@@ -37,5 +37,10 @@ namespace Capa_VistaContabilidad
             navegador1.actual = this;
             navegador1.cargar(dgvTipoCuenta, Grupotextbox, "Colchoneria");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayuda/AyudaManteniminetoTipoCuenta.chm");
+        }
     }
 }
